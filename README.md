@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+[![npm version](https://badge.fury.io/js/angular2-expandable-list.svg)](https://www.npmjs.com/package/@nftverse/tale-wallet-plugin)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# @nftverse/tale-wallet-plugin
 
-## Available Scripts
+> This plugin can be used to integrate the tale wallet components into your own react application.
 
-In the project directory, you can run:
+## Table of contents
 
-### `npm start`
+- [@nftverse/tale-wallet-plugin](#project-name)
+  - [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Authors](#authors)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+These instructions will guide you how to use this sdk on your project.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Start with cloning this package on your local machine:
 
-### `npm run build`
+```sh
+$ npm i @nftverse/tale-wallet-plugin
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Import package on your project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+$ import "@nftverse/tale-wallet-plugin";
+```
 
-### `npm run eject`
+### this all will return 5 components which are
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- LoginUi
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Nftimage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- WalletUI
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- talewallet
 
-## Learn More
+- useAll
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- overlay
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### LoginUi
 
-### Code Splitting
+```sh
+import LoginUi from "@nftverse/tale-wallet-plugin/dist/LoginUi";
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### To use LoginUi on your project use
 
-### Analyzing the Bundle Size
+```sh
+<LoginUi />
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### WalletUI
 
-### Making a Progressive Web App
+```sh
+import WalletUI from "@nftverse/tale-wallet-plugin/dist/WalletUI";
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### To use WalletUI on your project use
 
-### Advanced Configuration
+```sh
+<WalletUI bgColor={"white"} textColor={"black"} />
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### useAll
 
-### Deployment
+#### useAll is a custom hook which contains all function of this plugin.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```sh
+import useAll from "@nftverse/tale-wallet-plugin/dist/useAll";
+```
 
-### `npm run build` fails to minify
+#### To use useAll on your project use
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```sh
+const { handleTablClick, defaultOpen, fetchList, balance, images } = useAll();
+```
+
+### Overlay
+
+#### Overlay is a modal which open when user click on a button.
+
+```sh
+import Overlay from "@nftverse/tale-wallet-plugin/dist/Overlay/Overlay";
+```
+#### To use overlay on your project use
+
+```sh
+<Overlay bgColor={"orange"} textColor={"black"} width={"700px"} height={"400px"} />
+```
+
+
+## Authors
+
+- **Syied**
